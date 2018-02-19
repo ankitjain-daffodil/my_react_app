@@ -1,0 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic|Oswald:400,300);
+
+.header__left-logo {
+  height: 70px;
+  width: 80px;
+  background: url(../img/icons/rootery_logo.svg) no-repeat center center;
+  background-size: 100%;
+}
