@@ -1,30 +1,37 @@
-var config = {
+const webpack = require('webpack');
+var path = require("path");
+
+module.exports = {
+  context: __dirname,
   entry: './src/index.js',
   output: {
     path: __dirname,
     publicPath: '/',
-    filename: 'bundle.js'
-  },
-  devServer: {
-     inline: true,
-     port: 8080
-  },
-  resolve: {
-    extensions: ['.js', '.jsx']
+    filename: 'bundle.js',
+    devtoolModuleFilenameTemplate: '[resourcePath]',
+    devtoolFallbackModuleFilenameTemplate: '[resourcePath]?[hash]'
   },
   module: {
-     loaders: [
-        {
-           test: /\.jsx?$/,
-           exclude: /node_modules/,
-           loader: 'babel-loader',
-           query: {
-              presets: ['es2015', 'react']
-           },
-        },
-        { test: /\.css$/, loader: "style-loader!css-loader" },
-        { test: /\.css.scss$/, loader: "style-loader!css-loader" },
-     ]
-  }
-}
-module.exports = config;
+    loaders: [
+      {
+        test: [/\.jsx?$/, /\.js?$/],
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015', 'react']
+        }
+      }
+    ]
+  },
+  devtool: 'source-maps',
+  resolve: {
+    extensions: [".js", ".jsx"]
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+      }
+    })
+  ]
+};

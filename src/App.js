@@ -11,7 +11,7 @@ constructor(props) {
 render() {
 
     return(
-        <div>
+        <div className="body">
             <Header/>
             {this.props.children}
             <Footer/>

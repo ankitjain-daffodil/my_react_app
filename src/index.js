@@ -9,10 +9,10 @@ import { BrowserRouter as Router} from 'react-router-dom'
 import routes from './routes'
 
 import rootReducer from './reducers/root_reducer'
-import store from './store/store'
+import configureStore from './store/store'
 
 ReactDom.render(
-    <Provider store={store}>
+    <Provider store={configureStore()}>
         {routes}
     </Provider>, document.querySelector('#root')
 )
