@@ -22,11 +22,11 @@ class ProductSearch extends Component {
             <div className="header-search-wrapper">
 
                 <Autocomplete
-                    getItemValue={(item, i) => item.label}
+                    getItemValue={(item, i) => item.title}
                     items={this.props.search_products}
                     renderItem={(item, isHighlighted) =>
                         <div key={item.id} style={{ background: isHighlighted ? 'lightgray' : 'white' }}>
-                            {item.label}
+                            {item.title}
                         </div>
                     }
                     onChange={this.getSearchedProducts}

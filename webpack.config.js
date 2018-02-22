@@ -30,7 +30,8 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+        'API_ROUTE': JSON.stringify(process.env.API_ROUTE || "http://localhost:3000/api/v1/") 
       }
     })
   ]
