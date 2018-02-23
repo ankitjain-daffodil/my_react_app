@@ -35,7 +35,44 @@ class Lending extends Component {
                                     <span>Trusted</span>
                                 </span>
                             </span></strong> Cannabis.</h2>
-                            <p className="lead">Trusted by the satisfied users, Rootery is a huge success</p>
+                            <p className="lead">Browse Products by Category</p>
+                            <p className="lead">Already have an idea of what you're looking for?</p>
+                        </div>
+                    </div>
+                    <div className="row mt-xl">
+                        <div className="counters counters-text-dark">
+                            <div className="col-md-3 col-sm-6">
+                                <div className="counter appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300">
+                                    <Link to='/products/category/concentrates'>
+                                        <img src='../../../assets/img/lending/concentrates.png' />
+                                        <label>Concentrates</label>
+                                    </Link>
+                                </div>
+                            </div>
+                            <div className="col-md-3 col-sm-6">
+                                <div className="counter appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300">
+                                    <Link to='/products/category/concentrates'>
+                                        <img src='../../../assets/img/lending/edibles.png' />
+                                        <label>Edibles</label>
+                                    </Link>
+                                </div>
+                            </div>
+                            <div className="col-md-3 col-sm-6">
+                                <div className="counter appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300">
+                                    <Link to='/products/category/concentrates'>
+                                        <img src='../../../assets/img/lending/flowers.png' />
+                                        <label>Flowers</label>
+                                    </Link>
+                                </div>
+                            </div>
+                            <div className="col-md-3 col-sm-6">
+                                <div className="counter appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300">
+                                    <Link to='/products/category/concentrates'>
+                                        <img src='../../../assets/img/lending/topicals.png' />
+                                        <label>Topicals</label>
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <section className="section section-default section-with-mockup mb-none">

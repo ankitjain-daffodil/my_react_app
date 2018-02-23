@@ -57,7 +57,7 @@ class Footer extends Component {
 						<div className="row">
 							<div className="col-md-1">
 								<a href="index.html" className="logo">
-									<img alt="Porto Website Template" className="img-responsive" src="img/logo-footer.png"/>
+									<img alt="Porto Website Template" className="img-responsive" src="/assets/img/icons/rootery_logo.svg"/>
 								</a>
 							</div>
 							<div className="col-md-7">

@@ -18,7 +18,7 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015', 'react','stage-0']
+          presets: ['es2015', 'react', 'stage-0']
         }
       }
     ]
@@ -27,11 +27,14 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"]
   },
+  devServer: {
+    historyApiFallback: true
+  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
-        'API_ROUTE': JSON.stringify(process.env.API_ROUTE || "http://localhost:3000/api/v1/") 
+        'API_ROUTE': JSON.stringify(process.env.API_ROUTE || "http://localhost:3000/api/v1/")
       }
     })
   ]
