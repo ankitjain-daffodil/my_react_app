@@ -19,8 +19,14 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react', 'stage-0']
-        }
-      }
+        },
+        
+      },
+      {
+        test: /\.css$/,  
+        include: /node_modules/,  
+        loaders: ['style-loader', 'css-loader'],
+   }
     ]
   },
   devtool: 'source-maps',

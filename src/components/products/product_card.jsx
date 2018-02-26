@@ -4,6 +4,14 @@ class ProductCard extends Component {
     constructor(props) {
         super(props);
     }
+    
+    _get_product_price() {
+        if(this.props.product.kind === 'cannabis'){
+          return this.props.product.product_detail.price_range;
+        } else if(this.props.product.kind === 'hardware') {
+            return this.props.product.product_detail.price
+        }
+    }
 
     render() {
         const { product } = this.props;
@@ -28,9 +36,7 @@ class ProductCard extends Component {
                                 <div className="rating" style={{width: product.avg_rating*20+'%'}}><h2>{product.avg_rating}</h2></div>
                             </div>
                         </div>
-                        <div class="product-price-box">
-                           <span class="product-price">$89.00</span>
-                        </div>
+                        <h2 className="product-name"> Price Range: {this._get_product_price()} </h2>                
 
 
                     </div>

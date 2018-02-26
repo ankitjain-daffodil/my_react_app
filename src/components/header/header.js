@@ -68,17 +68,17 @@ class Header extends Component {
                                                                 <Link to='/' className='dropdown'>All</Link>
                                                             </li>
                                                             <li>
-                                                                <Link to='/' className='dropdown'>Concentrates</Link>
+                                                                <Link to='/products/category/concentrates' className='dropdown'>Concentrates</Link>
                                                             </li>
                                                             <li>
-                                                                <Link to='/' className='dropdown'>Prerolls</Link>
+                                                                <Link to='/products/category/prerolls' className='dropdown'>Prerolls</Link>
 
                                                             </li>
                                                             <li>
-                                                                <Link to='/' className='dropdown'>Flowers</Link>
+                                                                <Link to='/products/category/flower' className='dropdown'>Flowers</Link>
                                                             </li>
                                                             <li>
-                                                                <Link to='/' className='dropdown'>Topicals</Link>
+                                                                <Link to='/products/category/topicals' className='dropdown'>Topicals</Link>
                                                             </li>
 
                                                         </ul>
